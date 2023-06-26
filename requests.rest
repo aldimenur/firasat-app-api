@@ -1,0 +1,40 @@
+GET http://localhost:5000/todos 
+
+####
+
+POST http://localhost:5000/todo/new
+Content-Type: application/json
+
+{
+    "title": "Title 1",
+    "description" : "New Todo Description",
+    "dubber": [1,2,4]
+}
+
+###
+
+DELETE http://localhost:5000/todo/delete/64993fabbccd9289e4e0af82
+
+###
+
+PUT http://localhost:5000/todo/update/649940edc65266b04c1a54fb
+Content-Type: application/json
+
+{
+    "title": "Title 1",
+    "description" : "New Todo Description",
+    "enabled": true
+}
+
+###
+GET http://localhost:5000/tasks
+
+###
+POST http://localhost:5000/task/new
+Content-Type: application/json
+
+{
+    "title": "Title 1",
+    "description" : "New Todo Description",
+    "todoId": "64993fabbccd9289e4e0af82"
+}
