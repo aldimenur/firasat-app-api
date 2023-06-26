@@ -7,8 +7,20 @@ Content-Type: application/json
 
 {
     "title": "Title 1",
-    "description" : "New Todo Description",
-    "dubber": [1,2,4]
+    "description" : "TEST",
+    "enabled": true,
+    "dubber": [{
+        "name" : "aldi",
+        "voice" : "Aldi"
+    },
+    {
+        "name" : "budi",
+        "voice" : "Budi"
+    },
+    {
+        "name" : "cindy",
+        "voice" : "Cindy"
+    }]
 }
 
 ###
@@ -25,16 +37,5 @@ Content-Type: application/json
     "description" : "New Todo Description",
     "enabled": true
 }
-
-###
-GET http://localhost:5000/tasks
-
-###
-POST http://localhost:5000/task/new
-Content-Type: application/json
-
-{
-    "title": "Title 1",
-    "description" : "New Todo Description",
-    "todoId": "64993fabbccd9289e4e0af82"
-}
+    
+    ```

@@ -12,7 +12,12 @@ const TodoSchema = new Schema({
   },
   dubber: {
     type: Array,
-    default: [],
+    default: [
+      {
+        name: "",
+        voice: "",
+      },
+    ],
   },
   enabled: {
     type: Boolean,

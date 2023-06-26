@@ -31,6 +31,9 @@ app.get("/todos", async (req, res) => {
 app.post("/todo/new", (req, res) => {
   const todo = new Todo({
     title: req.body.title,
+    description: req.body.description,
+    enabled: req.body.enabled,
+    dubber: req.body.dubber,
   });
 
   todo.save();
@@ -49,42 +52,6 @@ app.put("/todo/update/:id", async (req, res) => {
 
   result.title = req.body.title;
   result.description = req.body.description;
-  result.enabled = req.body.enabled;
-
-  result.save();
-
-  res.json(result);
-});
-
-const Task = require("./models/Task");
-
-app.get("/tasks", async (req, res) => {
-  const tasks = await Task.find();
-  res.json(tasks);
-});
-
-app.post("/task/new", (req, res) => {
-  const task = new Task({
-    title: req.body.title,
-  });
-
-  task.save();
-
-  res.json(task);
-});
-
-app.delete("/task/delete/:id", async (req, res) => {
-  const result = await Task.findByIdAndDelete(req.params.id);
-
-  res.json(result);
-});
-
-app.put("/task/update/:id", async (req, res) => {
-  const result = await Task.findByIdAndUpdate(req.params.id);
-
-  result.title = req.body.title;
-  result.description = req.body.description;
-  result.dubber = req.body.dubber;
   result.enabled = req.body.enabled;
 
   result.save();
