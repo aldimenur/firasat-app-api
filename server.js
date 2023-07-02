@@ -53,6 +53,7 @@ app.put("/todo/update/:id", async (req, res) => {
   result.title = req.body.title;
   result.description = req.body.description;
   result.enabled = req.body.enabled;
+  result.dubber = req.body.dubber;
 
   result.save();
 
