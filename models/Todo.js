@@ -16,8 +16,13 @@ const TodoSchema = new Schema({
       {
         name: "",
         voice: "",
+        done: false,
       },
     ],
+  },
+  script: {
+    type: String,
+    default: "",
   },
   enabled: {
     type: Boolean,

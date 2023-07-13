@@ -29,13 +29,11 @@ DELETE http://localhost:5000/todo/delete/64993fabbccd9289e4e0af82
 
 ###
 
-PUT http://localhost:5000/todo/update/649940edc65266b04c1a54fb
+PUT http://localhost:5000/todo/update/64993fabbccd9289e4e0af82
 Content-Type: application/json
 
 {
     "title": "Title 1",
-    "description" : "New Todo Description",
-    "enabled": true
 }
-    
-    ```
+
+```

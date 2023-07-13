@@ -34,6 +34,7 @@ app.post("/todo/new", (req, res) => {
     description: req.body.description,
     enabled: req.body.enabled,
     dubber: req.body.dubber,
+    script: req.body.script,
   });
 
   todo.save();
@@ -54,6 +55,7 @@ app.put("/todo/update/:id", async (req, res) => {
   result.description = req.body.description;
   result.enabled = req.body.enabled;
   result.dubber = req.body.dubber;
+  result.script = req.body.script;
 
   result.save();
 
