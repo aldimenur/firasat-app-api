@@ -63,4 +63,8 @@ app.put("/todo/update/:id", async (req, res) => {
   res.json(result);
 });
 
+app.get(/.*/, (req, res) => {
+  res.json("Hello World");
+});
+
 app.listen(5000, () => console.log("server started on port 5000"));
