@@ -63,7 +63,7 @@ app.put("/todo/update/:id", async (req, res) => {
   res.json(result);
 });
 
-app.get(/.*/, (req, res) => {
+app.get("/", (req, res) => {
   res.json("Hello World");
 });
 
