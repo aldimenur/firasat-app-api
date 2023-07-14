@@ -4,7 +4,7 @@
   "description": "API for firasat-app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon"
   },
   "author": "Aldiansyah",
   "license": "ISC",

@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-
 app.use(express.json());
 app.use(cors());
 
@@ -25,8 +24,13 @@ mongoose
 const Todo = require("./models/Todo");
 
 app.get("/todos", async (req, res) => {
-  const todos = await Todo.find();
-  res.json(todos);
+  Todo.find({})
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 app.post("/todo/new", (req, res) => {
