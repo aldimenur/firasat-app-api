@@ -7,7 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const server = "mongodb://127.0.0.1:27017/firasat";
+const server =
+  "mongodb+srv://aldimenur:EASFvdNxK3KNIu6r@firasat-db.donx2ga.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
   .connect(server, {
