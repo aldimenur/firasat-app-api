@@ -1,7 +1,3 @@
-Tentu! Berikut adalah README yang telah diperbarui dengan daftar dependensi yang baru.
-
----
-
 # NodeJs API - Belajar API
 
 Ini adalah repository contoh untuk belajar membuat API menggunakan Node.js. Repository ini mencakup contoh sederhana dari CRUD (Create, Read, Update, Delete) operasi dengan menggunakan Express.js dan MongoDB sebagai database.
